@@ -69,6 +69,21 @@ for (let i = 0; i < 10; i++) {
     console.log(`Hi, ${userName}, your number in queue is ${i}`);
 }
 
+
+// continue && break с метками. Використовується тільки коли треба завершити ітерацію в одному циклі та перейти до іншого
+
+first: for ( let i = 0; i < 3; i++ ){
+    console.log(`first step ${i}`);
+    for (let k = 10; k > 0; k-- ){
+        console.log(`second step and 'continue' to first step`);
+        if ( k === 10 ){
+            continue first;
+        }
+    }
+}
+
+
+
 // += перезаписує значення змінної
 
 let i = 0;
@@ -91,6 +106,8 @@ for (let i = 1; i < 4; i++){
         console.log(`${i}${k}`);
     }
 }
+
+
 
 
 // задача
