@@ -13,29 +13,25 @@ function math(a, b) {
 
 console.log(math(1, 4));
 
-let login = prompt('login', 'login');
-let password = prompt('password','password'); 
 
-function checkUser(login, password){
-    if ( login === 'admin' && password === 'admin' ) {
-        console.log('access accepted');
-    } else {
-        console.log('access denied');
-        console.log(login);
+
+function getMathResult(a, b) {
+    if ( typeof(b) !== 'number' && b <= 0 ){
+        return a;
     }
-}
-
-checkUser(login, password);
-
-
-function getMathResult(a, b){
+    
+    
     let result = a;
-    let answer;
+    let str = a;
     for ( let i = 1; i < b; i++ ){
         result *= a;
-        console.log(result);
-        answer = `${result} + ---`;
+        str += '---' + result;
     }
-    console.log(answer);
+
+    return str;
+
+
+
 }
-getMathResult(2, 3);
+console.log(getMathResult(5, 5));
+
